@@ -1,0 +1,25 @@
+{
+  "name": "penfold-payroll-api-client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@hey-api/openapi-ts": "^0.51.0",
+    "@types/papaparse": "^5.3.14"
+  },
+  "scripts": {
+    "openapi-ts": "openapi-ts",
+    "generate-client": "ts-node src/utils/generateClient.ts",
+    "submit-papdis": "ts-node src/examples/submitPapdis.ts"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@hey-api/client-fetch": "^0.1.12",
+    "@types/debug": "^4.1.12",
+    "@types/node": "^22.0.0",
+    "debug": "^4.3.6",
+    "papaparse": "^5.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
