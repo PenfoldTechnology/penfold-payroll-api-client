@@ -1,4 +1,4 @@
-import { AuthConfig, AuthToken } from "./types";
+import { ApiConfig, AuthToken } from "./types";
 
 function scopeBaseUrl(environment: "sandbox" | "production") {
   return `https://${
@@ -6,7 +6,7 @@ function scopeBaseUrl(environment: "sandbox" | "production") {
   }.onmicrosoft.com`;
 }
 
-async function getAuthToken(config: AuthConfig): Promise<AuthToken> {
+async function getAuthToken(config: ApiConfig): Promise<AuthToken> {
   const url = `https://login.microsoftonline.com/${config.directoryTenantId}/oauth2/v2.0/token`;
 
   const params = new URLSearchParams({
